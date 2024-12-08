@@ -26,3 +26,4 @@ const CheckoutSection = ({ totalPrice, isDisabled }) => {
 };
 
 export default CheckoutSection;
+//ревью
