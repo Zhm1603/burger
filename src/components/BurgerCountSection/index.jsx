@@ -1,32 +1,33 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-
-const BurgerCountSection = () =>{
+const BurgerCountSection = ({ onPriceChange }) => {
     const BURGER_PRICE = 11.99;
     const [count, setCount] = useState(0);
-    const [price, setPrice] = useState(0);
+
     const changeCount = (event) => {
+        let newCount = count;
         if (event.target.name === "plus") {
-            const newCount = count + 1;
-            setCount(newCount);
-            setPrice(newCount * BURGER_PRICE);
+            newCount = count + 1;
         } else if (count > 0) {
-            const newCount = count - 1;
-            setCount(newCount);
-            setPrice(newCount * BURGER_PRICE);
+            newCount = count - 1;
         } else {
             alert("Невозможно удалить последний бургер!");
+            return;
         }
+        setCount(newCount);
+        onPriceChange(newCount * BURGER_PRICE);
     };
-    return(
-        <div class="count">
-            <button name="plus" class="button_plus" onClick={changeCount}>+</button>
-            <div class="digit">{count}</div>
-            <button name="minus" class="button_minus" onClick={changeCount}>-</button>
-            <div class="food-price">
-                <span  class="basket-price">${price.toFixed(2)}</span>
+
+    return (
+        <div className="count">
+            <button name="plus" className="button_plus" onClick={changeCount}>+</button>
+            <div className="digit">{count}</div>
+            <button name="minus" className="button_minus" onClick={changeCount}>-</button>
+            <div className="food-price">
+                <span className="basket-price">${(count * BURGER_PRICE).toFixed(2)}</span>
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default BurgerCountSection;

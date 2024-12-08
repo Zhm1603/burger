@@ -1,0 +1,6 @@
+.apply-coupon-part-disable {
+    opacity: 0.3;
+    background-color: lightgrey;
+    user-select: none;
+    pointer-events: none;
+}
