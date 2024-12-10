@@ -1,8 +1,12 @@
 import React from "react";
+import Header from "../../components/Header";
 
-const DefaultLayout = () =>{
+const DefaultLayout = ({title, children}) =>{
     return(
-        <div></div>
+        <div>
+            <Header>{title}</Header>
+            {children}
+        </div>
     )
 };
 export default DefaultLayout;

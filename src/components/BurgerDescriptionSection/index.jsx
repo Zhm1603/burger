@@ -1,4 +1,6 @@
 import cheeseburger from "../../asserts/cheeseburger.png";
+import React from 'react';
+
 const BurgerDescriptionSection = () =>{
     return(
         <div>
@@ -11,4 +13,5 @@ const BurgerDescriptionSection = () =>{
         </div>
     )
 }
+
 export default BurgerDescriptionSection;
