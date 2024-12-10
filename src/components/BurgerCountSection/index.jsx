@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './style.css';
 
 
 const BurgerCountSection = () =>{
@@ -20,9 +21,11 @@ const BurgerCountSection = () =>{
     };
     return(
         <div class="count">
-            <button name="plus" class="button_plus" onClick={changeCount}>+</button>
-            <div class="digit">{count}</div>
-            <button name="minus" class="button_minus" onClick={changeCount}>-</button>
+            <div class="plus-minus">
+                <button name="plus" class="button_plus" onClick={changeCount}>+</button>
+                <div class="digit">{count}</div>
+                <button name="minus" class="button_minus" onClick={changeCount}>-</button>
+            </div>
             <div class="food-price">
                 <span  class="basket-price">${price.toFixed(2)}</span>
             </div>

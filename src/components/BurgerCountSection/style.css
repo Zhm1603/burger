@@ -1,0 +1,36 @@
+.count {
+    margin: 25px auto 0 auto;
+    display: flex;
+}
+
+.plus-minus {
+    position: relative;
+    right: 50px;
+    display: flex;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.button_plus {
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.button_minus {
+    margin-left: 5px;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.basket-price {
+    position: relative;
+    left: 60px;
+    top: -25px;
+    font-size: 20px;
+    font-weight: bold;
+}
