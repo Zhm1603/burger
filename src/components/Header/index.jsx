@@ -1,8 +1,9 @@
 import React from "react";
 
-const Header = ({children}) =>{
+const Header = ({title}) =>{
     return(
-        <div className="part-header">{children}</div>
+        <div className="part-header">{title}</div>
     )
 };
+
 export default Header;
