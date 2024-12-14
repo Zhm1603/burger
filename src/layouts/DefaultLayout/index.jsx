@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 
-const DefaultLayout = ({title, children}) =>{
+const DefaultLayout = ({ title, children }) =>{
     return(
         <div>
             <Header>{title}</Header>

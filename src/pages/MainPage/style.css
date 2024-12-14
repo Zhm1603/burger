@@ -1,33 +1,5 @@
-.first-container {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.first-container .part-header {
-    position: relative;
-    top: -50px;
-    left: 30px;
-    display: block;
-}
-
-.container {
-    width: 650px;
-    margin: auto;
-}
-
-.second-container {
-    background-color: #dfdecb;
-    margin-top: 5px;
-    padding: 20px 30px;
-    border-radius: 10px;
-}
-
-.second-container .part-header {
-    font-size: 15px;
+.fragment{
+    width:600px;
+    color:black;
+    
 }

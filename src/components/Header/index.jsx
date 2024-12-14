@@ -1,8 +1,9 @@
 import React from "react";
+import './style.css';
 
-const Header = ({title}) =>{
+const Header = ({ children  }) =>{
     return(
-        <div className="part-header">{title}</div>
+        <div className="part-header">{children }</div>
     )
 };
 

@@ -12,21 +12,12 @@ const MainPage = () =>{
     const [isDisabled, setIsDisabled] = useState(false); 
 
     return(
-        <div className='container'>
-            <div className="first-container">
-                <Header>Your cart</Header>
-                <BurgerDescriptionSection />
-                <BurgerCountSection></BurgerCountSection>
-            </div>
-            <div className="second-container">
-                <Header >Apply coupon</Header>
-                <ApplyCouponSection></ApplyCouponSection>
-            </div>
-        <div>
+        
+        <div className="fragment">
             <DefaultLayout title={"Your cart"}>
                 <div class ="layout-content">
                     <BurgerDescriptionSection />
-                    <BurgerCountSection onPriceChange={setTotalPrice}></BurgerCountSection>
+                    <BurgerCountSection onPriceChange={setTotalPrice} />
                 </div> 
             </DefaultLayout>
             <DefaultLayout title={"Apply coupon"}>
