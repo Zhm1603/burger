@@ -3,6 +3,7 @@ import  {useState} from "react";
 import BurgerCountSection from "../../components/BurgerCountSection";
 import BurgerDescriptionSection from "../../components/BurgerDescriptionSection";
 import ApplyCouponSection from "../../components/ApplyCouponSection";
+import './style.css';
 import CheckoutSection from "../../components/CheckoutSection";
 import DefaultLayout from "../../layouts/DefaultLayout";
 
@@ -11,11 +12,12 @@ const MainPage = () =>{
     const [isDisabled, setIsDisabled] = useState(false); 
 
     return(
-        <div>
+        
+        <div className="fragment">
             <DefaultLayout title={"Your cart"}>
                 <div class ="layout-content">
                     <BurgerDescriptionSection />
-                    <BurgerCountSection onPriceChange={setTotalPrice}></BurgerCountSection>
+                    <BurgerCountSection onPriceChange={setTotalPrice} />
                 </div> 
             </DefaultLayout>
             <DefaultLayout title={"Apply coupon"}>
