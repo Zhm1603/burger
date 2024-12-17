@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './style.css';
 
 const ApplyCouponSection = ({ isDisabled, setIsDisabled }) => {
     const [inputValue, setInputValue] = useState("");
