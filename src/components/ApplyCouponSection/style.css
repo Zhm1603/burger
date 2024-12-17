@@ -1,3 +1,4 @@
+/* стили должны быть в переменных */
 
 .apply-coupon-part-disable {
     opacity: 0.3;
@@ -22,7 +23,7 @@
     padding: 5px 10px; 
     border-top: 2px solid rgb(54, 47, 29); 
     border-bottom: 2px solid rgb(132, 125, 107);
-    color: rgb(209, 202, 184); 
+    color: var(--text-button-color); 
     background-color: rgb(148, 141, 123);
     border-radius: 5px;
     margin-left: -5%;
@@ -36,7 +37,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: rgb(209, 202, 184);
+    color: var(--text-button-color);
     background-color: rgb(148, 141, 123);
     background-image: linear-gradient(rgb(148, 141, 123),rgb(99, 92, 74));
 }
