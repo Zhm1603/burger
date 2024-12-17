@@ -1,41 +1,46 @@
 import React from "react";
-import  {useState} from "react";
+import { useState } from "react";
 import BurgerCountSection from "../../components/BurgerCountSection";
 import BurgerDescriptionSection from "../../components/BurgerDescriptionSection";
 import ApplyCouponSection from "../../components/ApplyCouponSection";
-import './style.css';
 import CheckoutSection from "../../components/CheckoutSection";
-import DefaultLayout from "../../layouts/DefaultLayout";
+import BlockLayout from "../../layouts/BlockLayout";
+import "./style.css";
+// приоритеты подключений: сначала должен прогружаться реакт
+// затем хуки
+// затем твои кастомные компоненты
+// затем стили
 
-const MainPage = () =>{
+const MainPage = () => {
     const [totalPrice, setTotalPrice] = useState(0);
-    const [isDisabled, setIsDisabled] = useState(false); 
+    const [isDisabled, setIsDisabled] = useState(false);
 
-    return(
-        
+    return (
         <div className="fragment">
-            <DefaultLayout title={"Your cart"}>
-                <div class ="layout-content">
+            <BlockLayout title={"Your cart"}>
+                <div class="layout-content">
                     <BurgerDescriptionSection />
                     <BurgerCountSection onPriceChange={setTotalPrice} />
-                </div> 
-            </DefaultLayout>
-            <DefaultLayout title={"Apply coupon"}>
-                <div class ="layout-content">
-                    <ApplyCouponSection 
-                    isDisabled={isDisabled} 
-                    setIsDisabled={setIsDisabled}></ApplyCouponSection>
                 </div>
-            </DefaultLayout>
-            <DefaultLayout title={"Checkout"}>
+            </BlockLayout>
+            <BlockLayout title={"Apply coupon"}>
                 <div class="layout-content">
-                    <CheckoutSection 
-                    totalPrice={totalPrice} 
-                    isDisabled={isDisabled}></CheckoutSection>
+                    <ApplyCouponSection
+                        isDisabled={isDisabled}
+                        setIsDisabled={setIsDisabled}
+                    />
                 </div>
-            </DefaultLayout>
+            </BlockLayout>
+            <BlockLayout title={"Checkout"}>
+                <div class="layout-content">
+                    <CheckoutSection
+                        totalPrice={totalPrice}
+                        isDisabled={isDisabled}
+                    />
+                </div>
+            </BlockLayout>
         </div>
-    )
+    );
 };
 
 export default MainPage;

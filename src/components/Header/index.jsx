@@ -1,10 +1,8 @@
 import React from "react";
-import './style.css';
+import "./style.css";
 
-const Header = ({ children  }) =>{
-    return(
-        <div className="part-header">{children }</div>
-    )
+const Header = ({ children }) => {
+    return <div className="part-header">{children}</div>;
 };
 
 export default Header;

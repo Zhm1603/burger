@@ -5,6 +5,7 @@ import React from 'react';
 function App() {
   return (
     <div className="app">
+      {/* тут будет в будущем роутер стоять */}
       <MainPage />
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './style.css';
+import "./style.css";
 
 const ApplyCouponSection = ({ isDisabled, setIsDisabled }) => {
     const [inputValue, setInputValue] = useState("");
@@ -11,14 +11,20 @@ const ApplyCouponSection = ({ isDisabled, setIsDisabled }) => {
     const ApplyCoupon = () => {
         if (inputValue === "sale") {
             alert("Coupon applied!");
-            setIsDisabled(true); 
+            setIsDisabled(true);
         } else {
             alert("Invalid coupon!");
         }
     };
-
+    {
+        /* нужно выделять весь код, затем ctrl+K -> ctrl+F это линтер который ровняет код*/
+    }
     return (
-        <div className={isDisabled ? "apply-coupon-part-disable" : "apply-coupon-part"}>
+        <div
+            className={
+                isDisabled ? "apply-coupon-part-disable" : "apply-coupon-part"
+            }
+        >
             <input
                 onChange={handleInputChange}
                 value={inputValue}
@@ -27,7 +33,11 @@ const ApplyCouponSection = ({ isDisabled, setIsDisabled }) => {
                 placeholder="Apply your coupons here"
                 className="input_field"
             />
-            <button onClick={ApplyCoupon} id="apply-coupon" className="apply-button">
+            <button
+                onClick={ApplyCoupon}
+                id="apply-coupon"
+                className="apply-button"
+            >
                 Apply
             </button>
         </div>
