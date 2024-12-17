@@ -1,5 +1,6 @@
 .fragment{
     width:600px;
     color:black;
-    
+    display: block;
+    margin: 10px auto;
 }

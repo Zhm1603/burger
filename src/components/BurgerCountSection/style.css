@@ -1,3 +1,46 @@
-.count{
-    border:1px solid red;
+.count {
+    position: fixed;
+    display: flex;
+    margin-top: -6%;
+    margin-left: 22%;
 }
+
+.plus-minus {
+    /* position: relative; */
+    right: 50px;
+    display: flex;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.button_plus {
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 9px 15px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.button_minus {
+    margin-left: 5px;
+    font-size: 13px;
+    padding: 9px 15px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.basket-price {
+    position: relative;
+    left: 60px;
+    top: -25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.digit {
+    font-weight: bold;
+    margin: auto;
+    font-size: 17px;
+}
+
