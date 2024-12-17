@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './style.css';
 
 const BurgerCountSection = ({ onPriceChange }) => {
     const BURGER_PRICE = 11.99;
@@ -20,15 +21,12 @@ const BurgerCountSection = ({ onPriceChange }) => {
 
     return (
         <div className="count">
-            <button 
-            name="plus" 
-            className="button_plus" 
-            onClick={changeCount}>+</button>
-            <div className="digit">{count}</div>
-            <button 
-            name="minus" 
-            className="button_minus" 
-            onClick={changeCount}>-</button>
+            <div className="plus-minus">
+                <button name="plus" className="button_plus" onClick={changeCount}>+</button>
+                <div className="digit">{count}</div>
+                <button name="minus" className="button_minus" onClick={changeCount}>-</button>
+            </div>
+
             <div className="food-price">
                 <span className="basket-price">${(count * BURGER_PRICE).toFixed(2)}</span>
             </div>
